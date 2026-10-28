@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Club ER" id="club-er">
+    <mxGraphModel dx="1003" dy="641" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="person" parent="1" style="whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;Person&lt;/b&gt;&lt;br&gt;&lt;u&gt;ID&lt;/u&gt;&lt;br&gt;firstName&lt;br&gt;lastName&lt;br&gt;address" vertex="1">
+          <mxGeometry height="130" width="130" x="335" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="faculty" parent="1" style="whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;Faculty&lt;/b&gt;&lt;br&gt;department" vertex="1">
+          <mxGeometry height="60" width="100" x="276" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="student" parent="1" style="whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;Student&lt;/b&gt;&lt;br&gt;grade" vertex="1">
+          <mxGeometry height="60" width="107" x="425" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="club" parent="1" style="whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;Club&lt;/b&gt;&lt;br&gt;clubName" vertex="1">
+          <mxGeometry height="50" width="100" x="361" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="meeting" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="" vertex="1">
+          <mxGeometry height="143" width="143" x="63" y="406" as="geometry" />
+        </mxCell>
+        <mxCell id="meeting_inner" parent="1" style="whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;Meeting&lt;/b&gt;&lt;br&gt;&lt;u&gt;startTime&lt;/u&gt;&lt;br&gt;endTime&lt;br&gt;&lt;u&gt;classroomNum&lt;/u&gt;" vertex="1">
+          <mxGeometry height="131" width="131" x="69" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="trips" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="" vertex="1">
+          <mxGeometry height="143" width="143" x="623" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="trips_inner" parent="1" style="whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;FieldTrips&lt;/b&gt;&lt;br&gt;&lt;u&gt;startTime&lt;/u&gt;&lt;br&gt;endTime&lt;br&gt;&lt;u&gt;location&lt;/u&gt;" vertex="1">
+          <mxGeometry height="131" width="131" x="629" y="411" as="geometry" />
+        </mxCell>
+        <mxCell id="advisor" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=2;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Advisor&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="74" x="122" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="membership" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=2;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Membership&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="74" x="601" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="ident_meeting" parent="1" style="shape=rhombus;double=1;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;strokeWidth=2;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Holds&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="69" x="262" y="437" as="geometry" />
+        </mxCell>
+        <mxCell id="ident_trips" parent="1" style="shape=rhombus;double=1;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;strokeWidth=2;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Has&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="69" x="480" y="437" as="geometry" />
+        </mxCell>
+        <mxCell id="adv_start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;startDate&lt;/font&gt;" vertex="1">
+          <mxGeometry height="34" width="92" x="50" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="adv_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;endDate&lt;/font&gt;" vertex="1">
+          <mxGeometry height="34" width="92" x="180" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="mem_start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;startDate&lt;/font&gt;" vertex="1">
+          <mxGeometry height="34" width="92" x="537" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="mem_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;endDate&lt;/font&gt;" vertex="1">
+          <mxGeometry height="34" width="92" x="648.5" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="isa_faculty" edge="1" parent="1" source="faculty" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;endSize=10;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="person">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="isa_student" edge="1" parent="1" source="student" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;endSize=10;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="person">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fac_adv" edge="1" parent="1" source="faculty" style="html=1;endArrow=none;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endFill=0;startArrow=none;startFill=0;" target="advisor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adv_club" edge="1" parent="1" source="advisor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" target="club">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_stu_mem" edge="1" parent="1" source="student" style="html=1;endArrow=none;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" target="membership">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mem_club" edge="1" parent="1" source="membership" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" target="club">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adv_s" edge="1" parent="1" source="advisor" style="html=1;endArrow=none;dashed=1;strokeColor=#3b82f6;exitX=0.2;exitY=0.75;exitDx=0;exitDy=0;" target="adv_start">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adv_e" edge="1" parent="1" source="advisor" style="html=1;endArrow=none;dashed=1;strokeColor=#3b82f6;exitX=0.8;exitY=0.75;exitDx=0;exitDy=0;" target="adv_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mem_s" edge="1" parent="1" source="membership" style="html=1;endArrow=none;dashed=1;strokeColor=#3b82f6;exitX=0.2;exitY=0.75;exitDx=0;exitDy=0;" target="mem_start">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mem_e" edge="1" parent="1" source="membership" style="html=1;endArrow=none;dashed=1;strokeColor=#3b82f6;exitX=0.8;exitY=0.75;exitDx=0;exitDy=0;" target="mem_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_club_im" edge="1" parent="1" source="club" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=open;startFill=0;" target="ident_meeting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_club_it" edge="1" parent="1" source="club" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=open;startFill=0;" target="ident_trips">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_im_meeting" edge="1" parent="1" source="ident_meeting" style="shape=link;html=1;endArrow=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="meeting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_it_trips" edge="1" parent="1" source="ident_trips" style="shape=link;html=1;endArrow=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="trips">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
