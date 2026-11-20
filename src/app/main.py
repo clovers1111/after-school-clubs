@@ -14,11 +14,10 @@ config = dbConfig.DatabaseConfig.from_file()
 logging.info("Database config loaded with host %s user %s and database %s"
             % (config.host, config.user, config.database_name))
 
-
 base_repository = BaseRepository(config)
 
 person_repository = PersonRepository(base_repository)
 
-some_string = person_repository.find_person_by_id(10)
-
+# Test data - should be removed
+some_string = person_repository.find_all_people()
 print(some_string)
