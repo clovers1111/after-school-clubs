@@ -36,13 +36,3 @@ class DatabaseConfig:
             database_name=config[SECTION][DATABASE_NAME_KEY],
             connection_timeout=int(config[SECTION][CONNECTION_TIMEOUT_KEY])
         )
-        
-            
-        
-    
-    
-        
-            
-        
-    
-    

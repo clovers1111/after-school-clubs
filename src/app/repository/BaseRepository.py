@@ -25,9 +25,6 @@ class BaseRepository:
                     connection_timeout = config.connection_timeout)
         logging.info("Connected to database %s on host %s" % (config.database_name, config.host))
 
-
-
-
     @staticmethod
     def validate_config(config: DatabaseConfig):
         if config.host is None:
