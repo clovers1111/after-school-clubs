@@ -1,6 +1,8 @@
 from configuration import DatabaseConfig as dbConfig
+from entity.ClubEntity import ClubEntity
 from repository.BaseRepository import BaseRepository
-from repository.PersonRepository import PersonRepository
+from repository.ClubRepository import ClubRepository
+from controller import HomeController
 import logging
 
 logging.basicConfig(
@@ -16,7 +18,11 @@ logging.info("Database config loaded with host %s user %s and database %s"
 
 base_repository = BaseRepository(config)
 
-person_repository = PersonRepository(base_repository)
+club_repository = ClubRepository(base_repository)
+club_data = club_repository.find_all_clubs()
+home_controller = HomeController()
+
+
 
 # Test data - should be removed
 some_string = person_repository.find_all_people()

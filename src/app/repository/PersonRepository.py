@@ -17,4 +17,4 @@ class PersonRepository:
     def find_person_by_id(self, id):
         query = "SELECT * FROM %s WHERE id = %s" % (PersonRepository.PERSON, id)
         # Return the first tuple from the list
-        return self.base_repository.query(query).first()
+        return self.base_repository.query(query)
