@@ -1,5 +1,8 @@
+from sqlalchemy.orm import mapped_column, Mapped
 
-class ClubEntity:
+from BaseEntity import Base
 
-    def get_headers(self):
-        return ['clubName']
+class ClubEntity(Base):
+    __tablename__ = "Club"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
