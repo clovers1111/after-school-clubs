@@ -9,6 +9,9 @@ from repository.ClubRepository import ClubRepository
 
 db = SQLAlchemy(model_class=BaseEntity)
 
+URI_CONFIG_KEY = "SQLALCHEMY_DATABASE_URI"
+ENGINE_CONFIG_KEY = "SQLALCHEMY_ENGINE_OPTIONS"
+
 def init_app(config: DatabaseConfig):
     app = Flask(__name__)
     # add config
@@ -20,8 +23,8 @@ def init_app(config: DatabaseConfig):
         port=config.port,
         database=config.database_name,
     )
-    app.config["SQLALCHEMY_DATABASE_URI"] = url
-    app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {"pool_pre_ping": True}
+    app.config[URI_CONFIG_KEY] = url
+    app.config[ENGINE_CONFIG_KEY] = {"pool_pre_ping": True}
     db.init_app(app)
 
     # Create the repository and pass the scoped session maker
