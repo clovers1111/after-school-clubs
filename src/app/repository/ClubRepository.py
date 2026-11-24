@@ -1,13 +1,15 @@
-from domain import TablesConstants
-from repository.BaseRepository import BaseRepository
+from flask_sqlalchemy.session import Session
+from sqlalchemy import Engine, select
+from sqlalchemy.orm import sessionmaker, scoped_session
 
-# clubName
+from entity.ClubEntity import ClubEntity
+
 class ClubRepository:
-    base_repository: BaseRepository
 
-    def __init__(self, base_repository: BaseRepository) -> None:
-        self.base_repository = base_repository
+    def __init__(self, session: scoped_session[Session]) -> None:
+        # We want to run everything in a session to ensure that any db operations are
+        # ran in a transaction and dealt with by the framework
+        self.session = session
 
     def find_all_clubs(self):
-        query = "SELECT * FROM %s" % TablesConstants.TablesConstants.CLUB
-        return self.base_repository.query(query)
+        return list(self.session.scalars(select(ClubEntity)))

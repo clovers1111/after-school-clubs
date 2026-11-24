@@ -1,11 +1,13 @@
-from repository import ClubRepository
-from flask import Flask, app
+from flask import Flask, app, Blueprint
+
+from repository.ClubRepository import ClubRepository
 
 
-# Controller sits directly under the view and
-# manages the view's state directly
-class ClubController:
-    clubs_repository = None
+def create_club_controller_bp(club_repository: ClubRepository):
+    bp = Blueprint('club', __name__, url_prefix='/v1/clubs')
 
+    @bp.route('/', methods=['GET'])
     def find_clubs(self):
         return self.clubs_repository.get_clubs()
+
+    return bp
