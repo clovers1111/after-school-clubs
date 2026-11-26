@@ -7,7 +7,7 @@ from domain.TablesConstants import TablesConstants
 from entity.BaseEntity import BaseEntity
 from entity.LocationEntity import LocationEntity
 
-
+# Still missing cascade deletion and updating
 class PersonEntity(BaseEntity):
     __tablename__ = TablesConstants.PERSON
 

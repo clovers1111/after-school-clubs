@@ -1,6 +1,6 @@
 from flask_sqlalchemy.session import Session
-from sqlalchemy import Engine, select
-from sqlalchemy.orm import sessionmaker, scoped_session
+from sqlalchemy import select
+from sqlalchemy.orm import scoped_session
 
 from entity.ClubEntity import ClubEntity
 
@@ -13,3 +13,7 @@ class ClubRepository:
 
     def find_all_clubs(self):
         return list(self.session.scalars(select(ClubEntity)))
+
+    # find clubs by student
+
+    # find clubs by advisor
