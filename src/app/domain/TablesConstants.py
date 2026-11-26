@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class TablesConstants(Enum):
+class TablesConstants(StrEnum):
     PERSON = "Person"
     ADVISOR = "Advisor"
     CLUB = "Club"
