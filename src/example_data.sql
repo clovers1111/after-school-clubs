@@ -35,13 +35,13 @@ CREATE TABLE Faculty(
 
 CREATE TABLE Student (
     ID    INT     PRIMARY KEY,
-    grade TINYINT NOT NULL
+    grade TINYINT NOT NULL,
     FOREIGN KEY (ID) REFERENCES Person(ID)
     ON DELETE CASCADE
 );
 
 CREATE TABLE Club(
-    clubName       VARCHAR(60) PRIMARY KEY,
+    clubName       VARCHAR(60) PRIMARY KEY
 );
 
 CREATE TABLE Membership(
@@ -75,7 +75,3 @@ CREATE TABLE Event(
     FOREIGN KEY (clubName)   REFERENCES Club(clubName),
     FOREIGN KEY (locationID) REFERENCES Location(ID)
 );
-
-INSERT INTO Location (location, roomNum) VALUES ('wherever', '123b');
-
-INSERT INTO Person (firstName, lastName, address) VALUES ('first test', 'last test', 1);

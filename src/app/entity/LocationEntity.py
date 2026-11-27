@@ -10,7 +10,7 @@ from entity.BaseEntity import BaseEntity
 class LocationEntity(BaseEntity):
     __tablename__ = TablesConstants.LOCATION
 
-    id: Mapped[int] = mapped_column(primary_key=True, auto_increment=True)
+    id: Mapped[int] = mapped_column(primary_key=True)
     location: Mapped[str] = mapped_column(String(100))
     room_number: Mapped[str] = mapped_column("roomNumber", String(10),
                                              default="",

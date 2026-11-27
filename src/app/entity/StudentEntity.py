@@ -12,5 +12,5 @@ class StudentEntity(BaseEntity):
     id: Mapped[int] = mapped_column(ForeignKey(f"{TablesConstants.PERSON}.id"), primary_key=True)
     grade: Mapped[int] = mapped_column()
     # Missing cascade deletion
-    person: Mapped[PersonEntity] = relationship()
+    person: Mapped["PersonEntity"] = relationship()
 

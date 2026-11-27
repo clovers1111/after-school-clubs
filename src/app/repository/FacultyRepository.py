@@ -2,11 +2,12 @@ from flask_sqlalchemy.session import Session
 from sqlalchemy import select
 from sqlalchemy.orm import scoped_session
 
+from domain.TablesConstants import TablesConstants
 from entity import FacultyEntity
-from entity.LocationEntity import LocationEntity
 
+class FacultyRepository:
 
-class LocationRepository:
+    table = TablesConstants.FACULTY
 
     def __init__(self, session: scoped_session[Session]) -> None:
         # We want to run everything in a session to ensure that any db operations are

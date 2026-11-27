@@ -9,3 +9,5 @@ class ClubEntity(BaseEntity):
     __tablename__ = TablesConstants.CLUB
 
     name: Mapped[str] = mapped_column("clubName", String(60), primary_key=True)
+
+

@@ -6,7 +6,7 @@ from entity.BaseEntity import BaseEntity
 from entity.PersonEntity import PersonEntity
 
 
-class ClubEntity(BaseEntity):
+class FacultyEntity(BaseEntity):
     __tablename__ = TablesConstants.FACULTY
 
     id: Mapped[int] = mapped_column(ForeignKey(f"{TablesConstants.PERSON}.id"), primary_key=True)

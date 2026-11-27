@@ -1,10 +1,12 @@
 from datetime import datetime
 
 from sqlalchemy import String, ForeignKey
-from sqlalchemy.orm import mapped_column, Mapped
+from sqlalchemy.orm import mapped_column, Mapped, relationship
 
 from domain.TablesConstants import TablesConstants
 from entity.BaseEntity import BaseEntity
+from entity.ClubEntity import ClubEntity
+from entity.LocationEntity import LocationEntity
 
 
 class EventEntity(BaseEntity):
@@ -19,4 +21,7 @@ class EventEntity(BaseEntity):
     description: Mapped[str] = mapped_column("description", String(50))
     location_id: Mapped[int] = mapped_column("locationId",
                                              ForeignKey(f"{TablesConstants.LOCATION}.id"))
+
+    club: Mapped["ClubEntity"] = relationship()
+    location: Mapped["LocationEntity"] = relationship()
 
