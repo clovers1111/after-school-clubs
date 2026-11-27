@@ -1,10 +1,20 @@
-from repository.BaseRepository import BaseRepository
+from flask_sqlalchemy.session import Session
+from sqlalchemy import select
+from sqlalchemy.orm import scoped_session
+
+from domain.TablesConstants import TablesConstants
+from entity.MembershipEntity import MembershipEntity
+from entity.PersonEntity import PersonEntity
 
 
 class MembershipRepository:
-    base_repository: BaseRepository
 
-    MEMBERSHIP = "Membership"
+    table = TablesConstants.MEMBERSHIP
 
-def __init__(self, base_repository: BaseRepository) -> None:
-    self.base_repository = base_repository
+    def __init__(self, session: scoped_session[Session]) -> None:
+        # We want to run everything in a session to ensure that any db operations are
+        # ran in a transaction and dealt with by the framework
+        self.session = session
+
+    def find_all_memberships(self):
+        return list(self.session.scalars(select(MembershipEntity)))

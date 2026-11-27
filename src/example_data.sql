@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS Location;
 CREATE TABLE Location (
     ID       INT          PRIMARY KEY AUTO_INCREMENT,
     location VARCHAR(100) NOT NULL,
-    roomNum  VARCHAR(10),
+    roomNum  VARCHAR(10) NOT NULL, -- Needs to be not null to enforce uniqueness
     CONSTRAINT room_and_location UNIQUE (location, roomNum)
 );
 
@@ -35,15 +35,13 @@ CREATE TABLE Faculty(
 
 CREATE TABLE Student (
     ID    INT     PRIMARY KEY,
-    grade TINYINT NOT NULL
+    grade TINYINT NOT NULL,
     FOREIGN KEY (ID) REFERENCES Person(ID)
     ON DELETE CASCADE
 );
 
 CREATE TABLE Club(
-    clubName       VARCHAR(60) PRIMARY KEY,
-    currentAdvisor INT NULL,
-    FOREIGN KEY (currentAdvisor) REFERENCES Faculty(ID)
+    clubName       VARCHAR(60) PRIMARY KEY
 );
 
 CREATE TABLE Membership(
@@ -71,13 +69,9 @@ CREATE TABLE Event(
     startTime   DATETIME    NOT NULL,
     endTime     DATETIME    NOT NULL,
     eventType   VARCHAR(30) NOT NULL,
-    description VARCHAR(50,
+    description VARCHAR(50),
     locationID  INT         NOT NULL,
     PRIMARY KEY (clubName, startTime),
     FOREIGN KEY (clubName)   REFERENCES Club(clubName),
     FOREIGN KEY (locationID) REFERENCES Location(ID)
 );
-
-INSERT INTO Location (location, roomNum) VALUES ('wherever', '123b');
-
-INSERT INTO Person (firstName, lastName, address) VALUES ('first test', 'last test', 1);
